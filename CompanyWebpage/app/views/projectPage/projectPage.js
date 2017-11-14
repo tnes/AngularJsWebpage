@@ -2,13 +2,13 @@
 
 angular.module('myApp.projectPage', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/projectPage', {
-    templateUrl: 'views/projectPage/projectPage.html',
-    controller: 'View2Ctrl'
-  });
-}])
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/projectPage', {
+            templateUrl: 'views/projectPage/projectPage.html',
+            controller: 'projectPageCtrl'
+        });
+    }])
 
-.controller('View2Ctrl', [function() {
+    .controller('projectPageCtrl', [function() {
 
-}]);
+    }]);

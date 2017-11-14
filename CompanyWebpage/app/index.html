@@ -18,27 +18,9 @@
   <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">CumpanyWebpage</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#!/homePage">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#!/projectPage">Projects</a></li>
-        <li><a href="#!/contactPage">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
+    <header ng-include="'header.html'"></header>
+    <div ng-view>
+    <div/>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -48,6 +30,8 @@
   <script src="app.js"></script>
   <script src="views/homePage/homePage.js"></script>
   <script src="views/projectPage/projectPage.js"></script>
+  <script src="views/aboutPage/aboutPage.js"></script>
+  <script src="views/contactPage/contactPage.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

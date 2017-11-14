@@ -2,13 +2,13 @@
 
 angular.module('myApp.homePage', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/homePage', {
-    templateUrl: 'views/homePage/homePage.html',
-    controller: 'View1Ctrl'
-  });
-}])
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/homePage', {
+            templateUrl: 'views/homePage/homePage.html',
+            controller: 'homePageCtrl'
+        });
+    }])
 
-.controller('View1Ctrl', [function() {
+    .controller('homePageCtrl', [function() {
 
-}]);
+    }]);

@@ -1,14 +1,18 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.homePage',
-  'myApp.projectPage',
-  'myApp.version'
+angular.
+  module('myApp', [
+    'ngRoute',
+    'myApp.homePage',
+    'myApp.projectPage',
+    'myApp.contactPage',
+    'myApp.aboutPage',
+    'myApp.version'
 ]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+  config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/homePage'});
-}]);
+    $routeProvider.otherwise({redirectTo: '/homePage'});
+  }
+  ]);
