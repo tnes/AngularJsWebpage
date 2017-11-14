@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.projectPage', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'views/view2/view2.html',
+  $routeProvider.when('/projectPage', {
+    templateUrl: 'views/projectPage/projectPage.html',
     controller: 'View2Ctrl'
   });
 }])
