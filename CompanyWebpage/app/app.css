@@ -23,3 +23,25 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.panel {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 24px;
+}
+
+.panel .panel-footer, .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.panel .panel-footer, .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.panel-body {
+    padding: 25px 20px;
+}
+
