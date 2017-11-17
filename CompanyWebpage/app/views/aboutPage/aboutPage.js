@@ -9,7 +9,7 @@ angular.module('myApp.aboutPage', ['ngRoute'])
         });
     }])
 
-    .controller('aboutPageCtrl', [ '$scope', function($scope) {
+    .controller('aboutPageCtrl', [ '$scope', function($scope, dataService) {
         $scope.employees = [
             {
                 "name": "Tommy Wiseau",
