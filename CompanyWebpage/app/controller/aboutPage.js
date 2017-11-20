@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('myApp.aboutPage', ['ngRoute'])
+angular.module('myApp.controller/aboutPage', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/aboutPage', {
-            templateUrl: 'views/aboutPage/aboutPage.html',
+            templateUrl: 'views/aboutPage.html',
             controller: 'aboutPageCtrl'
         });
     }])

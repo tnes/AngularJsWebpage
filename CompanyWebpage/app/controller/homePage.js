@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('myApp.homePage', ['ngRoute'])
+angular.module('myApp.controller/homePage', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/homePage', {
-            templateUrl: 'views/homePage/homePage.html',
+            templateUrl: 'views/homePage.html',
             controller: 'homePageCtrl'
         });
     }])

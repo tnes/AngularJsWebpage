@@ -4,10 +4,10 @@
 angular.
   module('myApp', [
     'ngRoute',
-    'myApp.homePage',
-    'myApp.projectPage',
-    'myApp.contactPage',
-    'myApp.aboutPage',
+    'myApp.controller/homePage',
+    'myApp.controller/projectPage',
+    'myApp.controller/contactPage',
+    'myApp.controller/aboutPage',
     'myApp.appFactory',
     'myApp.version'
 ]).

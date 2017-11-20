@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('myApp.contactPage', ['ngRoute'])
+angular.module('myApp.controller/contactPage', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/contactPage', {
-            templateUrl: 'views/contactPage/contactPage.html',
+            templateUrl: 'views/contactPage.html',
             controller: 'ContactPageCtrl'
         });
     }])
