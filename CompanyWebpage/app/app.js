@@ -8,6 +8,7 @@ angular.
     'myApp.projectPage',
     'myApp.contactPage',
     'myApp.aboutPage',
+    'myApp.appFactory',
     'myApp.version'
 ]).
   config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

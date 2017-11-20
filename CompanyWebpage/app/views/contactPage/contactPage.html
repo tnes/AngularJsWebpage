@@ -25,6 +25,26 @@
             </div>
         </div>
     </div>
+    <div class ="container text-center">
+        <table>
+            <tr>
+                <td ng-repeat="employee in employees">
+                    <div class="panel" style="margin-bottom: 20%;">
+                            <div class="text-center">
+                                <div class="panel-body">
+                                    <img alt="{{ employee.name }}" class="img-md img-circle img-border mar-btm" src="{{ employee.pictureUrl }}">
+                                    <h4 class="mar-no">{{ employee.name }}</h4>
+                                    <p>{{ employee.jobTitle }}</p>
+                                    <p>{{ employee.email }}</p>
+                                    <p>{{ employee.phonenumber }}</p>
+                                </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
 </div>
 <footer class="footer navbar-fixed-bottom" style="background-color: #222222; height: 50px; margin-top: 2%; text-align: center">
     <div class="container">

@@ -9,6 +9,7 @@ angular.module('myApp.contactPage', ['ngRoute'])
         });
     }])
 
-    .controller('ContactPageCtrl', [function() {
+    .controller('ContactPageCtrl', ['$scope', 'appFactory', function($scope, appFactory) {
 
+        $scope.employees = appFactory.getData();
     }]);
