@@ -38,11 +38,38 @@ angular.module('myApp.appFactory', [])
             }
         ];
 
+        var appProjects = [
+            {
+                "name": "Project 1",
+                "shortDescription": "Short description",
+                "longDescription": "This is a long description. This is a long description. This is a long description.",
+                "pictureUrl": "https://architecture.mit.edu/sites/architecture.mit.edu/files/styles/large_square_thumb/public/kva.png?itok=OVoiRQP-"
+
+            },
+            {
+                "name": "Project 2",
+                "shortDescription": "Short description",
+                "longDescription": "This is a long description. This is a long description. This is a long description.",
+                "pictureUrl": "https://architecture.mit.edu/sites/architecture.mit.edu/files/styles/large_square_thumb/public/kva.png?itok=OVoiRQP-"
+            },
+            {
+                "name": "Project 3",
+                "shortDescription": "Short description",
+                "longDescription": "This is a long description. This is a long description. This is a long description.",
+                "pictureUrl": "https://architecture.mit.edu/sites/architecture.mit.edu/files/styles/large_square_thumb/public/kva.png?itok=OVoiRQP-"
+            }
+        ];
+
         function getData() {
             return appData;
         }
 
+        function getProjects() {
+            return appProjects;
+        }
+
         return {
-            getData: getData
+            getData: getData,
+            getProjects: getProjects
         }
     });

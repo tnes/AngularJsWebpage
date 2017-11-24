@@ -1,9 +1,49 @@
-<div class="panel panel-primary ">
-  <div class="panel-heading">
-    Volvo240Turbo
+<div class="container">
+  <div class="container panel" style="margin-bottom: 2%;">
+    <div class="col-md-3">
+      <div class="text-center">
+        <div class="panel-body">
+          <img alt="Picture one" class="img-md img-border mar-btm" src="https://architecture.mit.edu/sites/architecture.mit.edu/files/styles/large_square_thumb/public/kva.png?itok=OVoiRQP-">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <br><br>
+        <h3 class="mar-no">Informasjon</h3>
+        <p>Informasjonen står her</p>
+      </div>
+    </div>
   </div>
-  <div class="panel-body">A Basic Panel</div>
+  <div class ="container text-center">
+    <div class="col-sm-4" ng-repeat="project in projects">
+            <div class="panel" style="margin-bottom: 20%;">
+              <div class="text-center">
+                <div class="panel-body">
+                  <img alt="{{ project.name }}" class="img-md img-circle img-border mar-btm" src="{{ project.pictureUrl }}">
+                  <h4 class="mar-no">{{ project.name }}</h4>
+                  <p ng-hide="showDescription === true">{{ project.shortDescription }}</p>
+                  <div ng-show="showDescription === true">
+                  <h2>{{ project.longDescription }}</h2>
+                  </div>
+                  <button ng-hide="showDescription === true" ng-click="showDescription = !showDescription">
+                    Read More
+                  </button>
+                  <button ng-show="showDescription === true" ng-click="showDescription = !showDescription">
+                    Read Less
+                  </button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div>
+
+  </div>
+
+
 </div>
+
 <footer class="footer navbar-fixed-bottom" style="background-color: #222222; height: 50px; margin-top: 2%; text-align: center">
   <div class="container">
     <span class="text-muted">Place sticky footer content here.</span>

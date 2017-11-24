@@ -9,6 +9,6 @@ angular.module('myApp.controller/projectPage', ['ngRoute'])
         });
     }])
 
-    .controller('projectPageCtrl', [function() {
-
+    .controller('projectPageCtrl', [ '$scope', 'appFactory', function($scope, appFactory) {
+        $scope.projects = appFactory.getProjects();
     }]);
