@@ -3,21 +3,29 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <form class="form-horizontal">
-                        <h2>Contact Us</h2>
+                    <form ng-submit="submitEmployee()" class="form-horizontal">
+                        <h2>Add a new employee</h2>
                         <div class="form-group">
-                            <label for="exampleInputName2">Name</label>
-                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Ola Nordmann">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" ng-model="name" name="name"  placeholder="Ola Nordmann">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail2">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="olaNordmann@email.com">
+                            <label for="">Job title</label>
+                            <input type="text" class="form-control" ng-model="jobTitle" name="jobTitle"  placeholder="Manager">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Phonenumber</label>
+                            <input type="text" class="form-control" ng-model="phonenumber" name="phonenumber"  placeholder="12376543">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" ng-model="email" name="email" placeholder="olaNordmann@email.com">
                         </div>
                         <div class="form-group ">
-                            <label for="exampleInputText">Your Message</label>
-                            <textarea  class="form-control" placeholder="Description"></textarea>
+                            <label for="">Information</label>
+                            <textarea  class="form-control" ng-model="information" name="information" placeholder="Information"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <input type="submit" id="submit" value="Submit employee" class="btn btn-primary"/>
                     </form>
 
                     <hr>

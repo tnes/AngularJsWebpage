@@ -2,7 +2,9 @@
 
 angular.module('myApp.appFactory', [])
 
-    .factory('appFactory', function() {
+    .factory('appFactory', ['$http', function($http) {
+
+
         var appData = [
             {
                 "name": "Torkel Nes",
@@ -60,6 +62,19 @@ angular.module('myApp.appFactory', [])
             }
         ];
 
+        function getXmlData(){
+           return $http({
+                method  : 'GET',
+                url     : 'http://localhost:8080/WebAuctionApp/webresources/beans.product',
+                timeout : 10000,
+                params  : {},  // Query Parameters (GET)
+                transformResponse : function(data) {
+                    // string -> XML document object
+                    return $.parseXML(data);
+                }
+        });
+        }
+
         function getData() {
             return appData;
         }
@@ -69,7 +84,8 @@ angular.module('myApp.appFactory', [])
         }
 
         return {
+            getXmlData: getXmlData,
             getData: getData,
             getProjects: getProjects
         }
-    });
+    }]);

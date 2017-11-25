@@ -9,7 +9,18 @@ angular.module('myApp.controller/homePage', ['ngRoute'])
         });
     }])
 
-    .controller('homePageCtrl', [function() {
+    .controller('homePageCtrl', ['$scope', 'appFactory', function($scope ,appFactory) {
+
+        $scope.xmlData = '';
+
+        appFactory.getXmlData().then(
+            function(response){
+                $scope.xmlData = response.documentElement.innerHTML;
+            },
+            function(error){
+                console.log(error.data);
+            });
+
 
         $('.carousel').carousel({
             interval: 5000,
