@@ -3,29 +3,21 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <form ng-submit="submitEmployee()" class="form-horizontal">
-                        <h2>Add a new employee</h2>
+                    <form ng-submit="submitMessage()" class="form-horizontal">
+                        <h3>Leave a message</h3>
                         <div class="form-group">
                             <label for="">Name</label>
                             <input type="text" class="form-control" ng-model="name" name="name"  placeholder="Ola Nordmann">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Job title</label>
-                            <input type="text" class="form-control" ng-model="jobTitle" name="jobTitle"  placeholder="Manager">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Phonenumber</label>
-                            <input type="text" class="form-control" ng-model="phonenumber" name="phonenumber"  placeholder="12376543">
                         </div>
                         <div class="form-group">
                             <label for="">Email</label>
                             <input type="email" class="form-control" ng-model="email" name="email" placeholder="olaNordmann@email.com">
                         </div>
                         <div class="form-group ">
-                            <label for="">Information</label>
-                            <textarea  class="form-control" ng-model="information" name="information" placeholder="Information"></textarea>
+                            <label for="">Message</label>
+                            <textarea  class="form-control" ng-model="information" name="information" placeholder="Message"></textarea>
                         </div>
-                        <input type="submit" id="submit" value="Submit employee" class="btn btn-primary"/>
+                        <input type="submit" id="submit" value="Submit message" class="btn btn-primary"/>
                     </form>
 
                     <hr>
@@ -33,7 +25,26 @@
             </div>
         </div>
     </div>
+    <div class="container panel" style="margin-bottom: 2%;" ng-repeat="message in messages">
+        <div class="col-md-3">
+            <div class="text-center">
+                <div class="panel-body">
+                    <img alt="{{ message.name }}" class="img-md img-circle img-border mar-btm" src="{{ message.pictureUrl }}">
+                    <h4 class="mar-no">{{ message.name }}</h4>
+                    <p>{{ message.email }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-center">
+                <br><br>
+                <h3 class="mar-no">Message</h3>
+                <p>{{ message.information }}</p>
+            </div>
+        </div>
+    </div>
     <div class ="container text-center">
+        <h3>Employees</h3>
         <div class="col-sm-3" ng-repeat="employee in employees">
                     <div class="panel" style="margin-bottom: 20%;">
                             <div class="text-center">
@@ -47,7 +58,6 @@
                         </div>
                     </div>
         </div>
-        <div class="col-sm-2"></div>
     </div>
 </div>
 

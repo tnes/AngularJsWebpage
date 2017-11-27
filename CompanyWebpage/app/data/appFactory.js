@@ -62,6 +62,8 @@ angular.module('myApp.appFactory', [])
             }
         ];
 
+        var appMessages = [];
+
         function getXmlData(){
            return $http({
                 method  : 'GET',
@@ -75,6 +77,10 @@ angular.module('myApp.appFactory', [])
         });
         }
 
+        function getMessages() {
+            return appMessages;
+        }
+
         function getData() {
             return appData;
         }
@@ -86,6 +92,7 @@ angular.module('myApp.appFactory', [])
         return {
             getXmlData: getXmlData,
             getData: getData,
-            getProjects: getProjects
+            getProjects: getProjects,
+            getMessages: getMessages
         }
     }]);
