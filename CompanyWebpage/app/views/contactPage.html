@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <form ng-submit="submitMessage()" class="form-horizontal">
-                        <h3>Leave a message</h3>
+                        <h3>Leave feedback</h3>
                         <div class="form-group">
                             <label for="">Name</label>
                             <input type="text" class="form-control" ng-model="name" name="name"  placeholder="Ola Nordmann">
@@ -25,6 +25,26 @@
             </div>
         </div>
     </div>
+    <div class ="container text-center">
+        <h3>Employees</h3>
+        <div class="col-sm-3" ng-repeat="employee in employees">
+                    <div class="panel" style="margin-bottom: 20%;">
+                            <div class="text-center">
+                                <div class="panel-body">
+                                    <img alt="{{ employee.name }}" class="img-md img-circle img-border mar-btm" src="{{ employee.pictureUrl }}">
+                                    <h4 class="mar-no">{{ employee.name }}</h4>
+                                    <p>{{ employee.jobTitle }}</p>
+                                    <p>{{ employee.email }}</p>
+                                    <p>{{ employee.phonenumber }}</p>
+                                </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class ="container text-center">
+        <h3>Feedback</h3>
+    </div>
+    <div ng-show="zeroMessages === true"> <h4>No messages to show....</h4> <br></div>
     <div class="container panel" style="margin-bottom: 2%;" ng-repeat="message in messages">
         <div class="col-md-3">
             <div class="text-center">
@@ -41,22 +61,6 @@
                 <h3 class="mar-no">Message</h3>
                 <p>{{ message.information }}</p>
             </div>
-        </div>
-    </div>
-    <div class ="container text-center">
-        <h3>Employees</h3>
-        <div class="col-sm-3" ng-repeat="employee in employees">
-                    <div class="panel" style="margin-bottom: 20%;">
-                            <div class="text-center">
-                                <div class="panel-body">
-                                    <img alt="{{ employee.name }}" class="img-md img-circle img-border mar-btm" src="{{ employee.pictureUrl }}">
-                                    <h4 class="mar-no">{{ employee.name }}</h4>
-                                    <p>{{ employee.jobTitle }}</p>
-                                    <p>{{ employee.email }}</p>
-                                    <p>{{ employee.phonenumber }}</p>
-                                </div>
-                        </div>
-                    </div>
         </div>
     </div>
 </div>

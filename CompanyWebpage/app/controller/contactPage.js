@@ -14,9 +14,13 @@ angular.module('myApp.controller/contactPage', ['ngRoute'])
 
         $scope.employees = appFactory.getData();
         $scope.messages = appFactory.getMessages();
+        $scope.zeroMessages = true;
 
         $scope.submitMessage = function() {
             if($scope.name && $scope.email && $scope.information) {
+                if($scope.zeroMessages === true) {
+                    $scope.zeroMessages = false;
+                }
                 $scope.message = [{
                     "name": $scope.name,
                     "pictureUrl": "http://wiseheartdesign.com/images/articles/default-avatar.png",

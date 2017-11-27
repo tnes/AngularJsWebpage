@@ -1,30 +1,28 @@
-<div class="container">
-  <div class="container panel" style="margin-bottom: 2%;">
+ <div class="container-fluid panel" style="margin-bottom: 2%;">
+    <div class="col-md-7">
+        <div class="panel-body">
+          <img alt="Picture one" class="img-md img-border mar-btm" src="https://www.ntnu.no/documents/140800/0/Selbu_Schmidt_350.jpg/db364b06-21e9-4e5b-803a-162d7f0af4d8?t=1421764848550">
+        </div>
+    </div>
     <div class="col-md-3">
       <div class="text-center">
-        <div class="panel-body">
-          <img alt="Picture one" class="img-md img-border mar-btm" src="https://architecture.mit.edu/sites/architecture.mit.edu/files/styles/large_square_thumb/public/kva.png?itok=OVoiRQP-">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="text-center">
         <br><br>
-        <h3 class="mar-no">Informasjon</h3>
-        <p>Informasjonen står her</p>
+        <h2 class="mar-no">Information</h2>
+        <br>
+        <h4>This is considered our greatest work so far. Beautiful architectural composition to catch the elements of the nature</h4>
       </div>
     </div>
-  </div>
+ </div>
   <div class ="container text-center">
     <div class="col-sm-4" ng-repeat="project in projects">
             <div class="panel" style="margin-bottom: 20%;">
               <div class="text-center">
                 <div class="panel-body">
                   <img alt="{{ project.name }}" class="img-md img-circle img-border mar-btm" src="{{ project.pictureUrl }}">
-                  <h4 class="mar-no">{{ project.name }}</h4>
-                  <p ng-hide="showDescription === true">{{ project.shortDescription }}</p>
+                  <h3 class="mar-no">{{ project.name }}</h3>
+                  <h4 ng-hide="showDescription === true">{{ project.shortDescription }}</h4>
                   <div ng-show="showDescription === true">
-                  <h2>{{ project.longDescription }}</h2>
+                  <h4>{{ project.longDescription }}</h4>
                   </div>
                   <button ng-hide="showDescription === true" ng-click="showDescription = !showDescription">
                     Read More
@@ -39,7 +37,6 @@
   </div>
   <div>
   </div>
-</div>
 <!-- Footer -->
 <div class="footer-bottom">
   <div class="container">
